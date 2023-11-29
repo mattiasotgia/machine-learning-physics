@@ -40,13 +40,8 @@ jobs:
         run: |
           jupyter-book build book
 
-      # Upload the book's HTML as an artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: "./book/_build/html"
-
-      # Deploy the book's HTML to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.6.4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: book/_build/html
