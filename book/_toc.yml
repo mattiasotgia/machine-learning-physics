@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/intro
+title: Introduzione
+parts:
+- caption: Lezioni
+  chapters:
+  - file: content/lectures/notebook
+# - caption: Approfondimenti
+- caption: Riferimenti bibliografici
+  chapters:
+  - file: content/zbiblio
+  
