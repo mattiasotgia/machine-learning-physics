@@ -35,7 +35,7 @@ repository:
 html:
   # favicon: images/logo/favicon.ico
   baseurl: https://mattiasotgia.github.io/machine-learning-physics
-  # home_page_in_navbar: true
+  home_page_in_navbar: false
   use_repository_button: true
   use_issues_button: true
   extra_footer: |
