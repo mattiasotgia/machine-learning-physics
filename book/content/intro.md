@@ -1,5 +1,9 @@
 # Metodi di Machine Learning per la Fisica
 
+[![DOI](https://zenodo.org/badge/725160254.svg)](https://zenodo.org/doi/10.5281/zenodo.10222404)
+![GitHub License](https://img.shields.io/github/license/mattiasotgia/machine-learning-physics?color=yellow)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mattiasotgia/machine-learning-physics/deploy.yml)
+
 Note e appunti per il corso di [Metodi di Machine Learning per la Fisica](https://corsi.unige.it/off.f/2023/ins/71919), presso il Dipartimento di Fisica, [Università degli Studi di Genova](https://unige.it/), tenuto dai professori Francesco Armando Di Bello, Andrea Coccaro e Riccardo Torre, il secondo semestre dell'anno accademico 2023/2024, corso di laurea magistrale in Fisica. 
 
 ## Il corso in breve
