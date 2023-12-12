@@ -8,7 +8,9 @@ parts:
 - caption: Lezioni
   chapters:
   - file: content/lectures/notebook
-# - caption: Approfondimenti
+- caption: Approfondimenti
+  chapters:
+  - file: content/in_depth/aridaje
 - caption: Riferimenti bibliografici
   chapters:
   - file: content/zbiblio
