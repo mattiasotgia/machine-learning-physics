@@ -7,10 +7,10 @@ title: Introduzione
 parts:
 - caption: Lezioni
   chapters:
-  - file: content/lectures/notebook
+  - file: content/lectures/introduction
 - caption: Approfondimenti
-  chapters:
-  - file: content/in_depth/aridaje
+#   chapters:
+#   - file: content/in_depth/aridaje
 - caption: Riferimenti bibliografici
   chapters:
   - file: content/zbiblio
