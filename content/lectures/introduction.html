@@ -377,7 +377,7 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p>Grande quantità di dati, ha raggiunto il livello della fisica.</p></td>
 <td><p>Da sempre grandi quantità di dati (LHC).</p></td>
-<td><p>3. amount and quantity of data</p></td>
+<td><p>3. amount and quality of data</p></td>
 <td><p>Non ci sono grandissime differenze da queste, eccetto casi estremamente specifici (GW, eventi rari). In generale di background abbiamo sempre tantissimi dati, mentre per gli eventi un po meno. Sulla <strong>qualità</strong> dei dati invece ci sono dei discorsi da fare. Nel caso sperimentale della SML, è invece un punto centrale, essendo l’esperimento controllato fin dall’inizio, e quindi noto in molti dei suoi dettagli. Un discorso importante che deve essere fatto è quello della possibilità di simulare molti dei processi. Questo permette quindi di possedere con estrema facilità molti dati puliti, generati con Monte Carlo, su cui poi ‘allenare’ con fedeltà gli algoritmi. Questo <strong>non è analogamente vero per GPML</strong>, dove non sempre è possibile generare in modo casuale processi (foto di cani o gatti) su cui allenare la rete, soffrendo di un bias iniziale (se gnenero solo su un certo tipo di cani, perché il computer conosce solo quello, allora non scoprirò mai che il mio algoritmo è allenato con un bias)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Non essendo estremeamente definite le FEATURES e le caratteristiche che si cercano sui dati che si considerano, e quindi le performances non possono essere estremamente alte.</p></td>
@@ -389,7 +389,11 @@ document.write(`
 </table>
 <section id="rappresentazioni-qualche-dettaglio-in-piu">
 <h2>Rappresentazioni: qualche dettaglio in più<a class="headerlink" href="#rappresentazioni-qualche-dettaglio-in-piu" title="Link to this heading">#</a></h2>
-<p>Considerato un esperimento supervisionato, per cui dato una variabile <span class="math notranslate nohighlight">\(x\)</span> (che può essere un vettore, o anche in un problema semplificato uno scalare) vogliamo ottenere <span class="math notranslate nohighlight">\( x \to y = f(x). \)</span></p>
+<p>Considerato un esperimento supervisionato, per cui dato una variabile <span class="math notranslate nohighlight">\(x\)</span> (che può essere un vettore, o anche in un problema semplificato uno scalare) vogliamo ottenere</p>
+<div class="math notranslate nohighlight">
+\[ 
+    x \to y = f(x). 
+\]</div>
 <figure class="margin align-right" id="id2">
 <img alt="../../_images/reparametrization.jpeg" src="../../_images/reparametrization.jpeg" />
 <figcaption>
