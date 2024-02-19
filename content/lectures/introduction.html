@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduzione &#8212; Metodi di Machine Learning per la Fisica</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/lectures/introduction';</script>
+    <link rel="canonical" href="https://mattiasotgia.github.io/machine-learning-physics/content/lectures/introduction.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Riferimenti bibliografici" href="../zbiblio.html" />
+    <link rel="prev" title="Metodi di Machine Learning per la Fisica" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Metodi di Machine Learning per la Fisica - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Metodi di Machine Learning per la Fisica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lezioni</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduzione</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Riferimenti bibliografici</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../zbiblio.html">Riferimenti bibliografici</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contatti esterni</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://mattiasotgia.github.io/">Mattia Sotgia</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://twitter.com/mattiasotgia1">@mattiasotgia1 (twitter)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/lectures/introduction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduzione</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduzione">
+<h1>Introduzione<a class="headerlink" href="#introduzione" title="Link to this heading">#</a></h1>
+<p>## (19 febbraio 2024)</p>
+<p>Obiettivo di questo corso non è tanto trovare e mostrare nel dettaglio il funzionamento di algoritmi di ML, quanto invece osservare come questi algoritmi possono esssere utilizzati per affrontare esempi di fisica, o più in geenrale applicati all’ambito della ricerca fisica (o scientifica).</p>
+<p>Esistono molti testi per quanto riguarda gli argomenti che sono trattati in questo corso, i principali sono in bibliografia <span id="id1">[<a class="reference internal" href="../zbiblio.html#id2" title="Charu C. Aggarwal. Neural Networks and Deep Learning: A Textbook. Springer International Publishing, Cham, 2018. ISBN 978-3-319-94462-3 978-3-319-94463-0. doi:10.1007/978-3-319-94463-0.">Agg18</a>, <a class="reference internal" href="../zbiblio.html#id3">Cow98</a>, <a class="reference internal" href="../zbiblio.html#id4" title="Ian Goodfellow, Yoshua Bengio, and Aaron Courville. Deep Learning. MIT press, 2016.">GBC16</a>, <a class="reference internal" href="../zbiblio.html#id5" title="Trevor Hastie, Robert Tibshirani, and Jerome Friedman. The Elements of Statistical Learning. Springer Series in Statistics. Springer, New York, NY, 2009. ISBN 978-0-387-84857-0 978-0-387-84858-7. doi:10.1007/978-0-387-84858-7.">HTF09</a>, <a class="reference internal" href="../zbiblio.html#id6" title="Luca Lista. Statistical Methods for Data Analysis in Particle Physics. Volume 941 of Lecture Notes in Physics. Springer International Publishing, Cham, 2017. ISBN 978-3-319-62839-4 978-3-319-62840-0. doi:10.1007/978-3-319-62840-0.">Lis17</a>, <a class="reference internal" href="../zbiblio.html#id7" title="Tilman Plehn, Anja Butter, Barry Dillon, and Claudius Krause. Modern Machine Learning for LHC Physicists. November 2022. arXiv:2211.01421, doi:10.48550/arXiv.2211.01421.">PBDK22</a>, <a class="reference internal" href="../zbiblio.html#id8" title="Lorenzo Rosasco. Introductory Machine Learning Notes1. University of Genoa ML, 2017.">Ros17</a>]</span>.</p>
+<p>Esistono quattro aspetti essenziali su cui vi è forte divergenza tra il _general purpouse machine learning (GPML) e invece il <em>scientific machine learning</em> (SML). Questi sono</p>
+<ol class="arabic simple">
+<li><p>Lo scopo (scope)</p></li>
+<li><p>Il modo in cui vengono rappresentati i dati (representation)</p></li>
+<li><p>La quantità e la qualità dei dati (amount and quality of data)</p></li>
+<li><p>Quanto ci aspettiamo che un certo algoritmo performi rispetto ad un algoritmo GPML (performance)</p></li>
+</ol>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>GPML</p></th>
+<th class="head"><p>SML</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fare cose che sono facili per l’uomo ma difficili per il computer (recognizing objects, listening, reasoning, driving, playing video games), ovvero ottenere un AGI (artificial general intelligence)</p></td>
+<td><p>Risolvere problemi troppo difficili per l’uomo e anche per il computer (integration, doing math, symbolic math, simulate syntethic data), ovvero un ASI (artificial scientific intelligence?)</p></td>
+<td><p>1. scope</p></td>
+<td><p>La differenza principale tra i due casi (GPML vs SML) è che sotto al cappello della SML si ipotizza che ci sia un modello, che quindi i dati possono utilizzare per <em>imparare</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cercando di replicare l’uomo, la rappresentazione dei dati è allineata con i cinque sensi (sight <span class="math notranslate nohighlight">\(\to\)</span> image, writing; earing <span class="math notranslate nohighlight">\(\to\)</span> audio, video, eg.: transcribe a spoken text; other application to touch, mainly in robotics; other application in smell, industry use). Ci riferiamo a queste rappresentazioni come UNCODED (anche se spesso in letteratura queste sono riferite come CODED)</p></td>
+<td><p>Queste rappresentazioni sono dette CODED, essendo dati rappresentati in modi informatici. Questi sono rappresentati come dati tabulari, plot</p></td>
+<td><p>2. representation</p></td>
+<td><p>Queste differenze sono estremamente importanti. Il grosso della evoluzione è infatti avvenuto nella GPML, dove gli algoritmi sono specialmente funzionali con questi modi di rappresentazioni. Quindi quello che si è spesso fatto è stato di convertire dalla rappresentazione per la SML alle rappresentazioni di GPML. Questo però ha chiaramente un costo che ha reso molto più difficile lo sviluppo della SML. Si sta cercando ora di capire come generalizzare gli algoritmi a tutte le rappresentazioni.</p></td>
+</tr>
+<tr class="row-even"><td><p>Grande quantità di dati, ha raggiunto il livello della fisica.</p></td>
+<td><p>Da sempre grandi quantità di dati (LHC).</p></td>
+<td><p>3. amount and quantity of data</p></td>
+<td><p>Non ci sono grandissime differenze da queste, eccetto casi estremamente specifici (GW, eventi rari). In generale di background abbiamo sempre tantissimi dati, mentre per gli eventi un po meno. Sulla <strong>qualità</strong> dei dati invece ci sono dei discorsi da fare. Nel caso sperimentale della SML, è invece un punto centrale, essendo l’esperimento controllato fin dall’inizio, e quindi noto in molti dei suoi dettagli. Un discorso importante che deve essere fatto è quello della possibilità di simulare molti dei processi. Questo permette quindi di possedere con estrema facilità molti dati puliti, generati con Monte Carlo, su cui poi ‘allenare’ con fedeltà gli algoritmi. Questo <strong>non è analogamente vero per GPML</strong>, dove non sempre è possibile generare in modo casuale processi (foto di cani o gatti) su cui allenare la rete, soffrendo di un bias iniziale (se gnenero solo su un certo tipo di cani, perché il computer conosce solo quello, allora non scoprirò mai che il mio algoritmo è allenato con un bias)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Non essendo estremeamente definite le FEATURES e le caratteristiche che si cercano sui dati che si considerano, e quindi le performances non possono essere estremamente alte.</p></td>
+<td><p>Le features sono espresse dal modello fisico, quindi si ha che le performances sono assolutamente più solide.</p></td>
+<td><p>4. performance</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<section id="rappresentazioni-qualche-dettaglio-in-piu">
+<h2>Rappresentazioni: qualche dettaglio in più<a class="headerlink" href="#rappresentazioni-qualche-dettaglio-in-piu" title="Link to this heading">#</a></h2>
+<p>Considerato un esperimento supervisionato, per cui dato una variabile <span class="math notranslate nohighlight">\(x\)</span> (che può essere un vettore, o anche in un problema semplificato uno scalare) vogliamo ottenere $<span class="math notranslate nohighlight">\( x \to y = f(x). \)</span><span class="math notranslate nohighlight">\( Chiamiamo FEATURES il vettore delle \)</span>x<span class="math notranslate nohighlight">\(, e TARGET il vettore delle \)</span>y<span class="math notranslate nohighlight">\(. La dimensionalità del problema è detta \)</span>n<span class="math notranslate nohighlight">\(. La rappresentazione consiste nello scegliere la base \)</span>{x_1,x_2,\dots,x_n}<span class="math notranslate nohighlight">\( su cui intendiamo invece scomporre le \)</span>\underline x<span class="math notranslate nohighlight">\(. La scelta di una buona rappresentazione è fondamentale perché potrebbe permettere di semplificare la forma della \)</span>f(\underline x)$ e quindi avere più chiarezza su come esprimerla. Un esempio è dato da considerare un insieme di dati che hanno distribuzione che sul piano è scomodo, ma appena passiamo in coordinate radiali è semplificato.</p>
+<p>La caratteristica che distingue SML da GPML è che in SML le features sono in genere suggerite dalla fisica che si sta studiando, mentre nel caso di GPML sono più complicate.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Features in GPML.</p>
+<p>Per esempio pensando solo al dover dare la differenza cane vs gatto: si parla allora di <em>representation</em> o <em>feature</em> learning.</p>
+</aside>
+<div class="admonition-confounding-features-class-tip admonition">
+<p class="admonition-title">Confounding features :class: tip</p>
+<p>Esistono, in entrambi i casi, quelle che sono invece definite le <em>confounding features</em>, ovvero FEATURES che non vorremmo in realtà tenere in considerazione, ma che, un po’ come un background sperimentale, rimangono invece e possono essere problematiche per l’algoritmo. Queste sono spesso associate però a proprietà di simmetria di un sistema, come per esempio una invarianza per traslazione: considerata una immagine, posso aspettarmi che una certa feature sia invece spostata dalla posizione in cui mi aspetti che sia. In questi casi non è il sistema che è invariante per simmetria, ma è la domanda che mi sto ponendo che deve invece esserlo.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Metodi di Machine Learning per la Fisica</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../zbiblio.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Riferimenti bibliografici</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mattia Sotgia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://mattiasotgia.github.io/machine-learning-physics">Metodi di Machine Learning per la Fisica</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://mattiasotgia.github.io">Mattia Sotgia</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
