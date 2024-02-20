@@ -401,11 +401,17 @@ document.write(`
 </figcaption>
 </figure>
 <p>Chiamiamo FEATURES il vettore delle <span class="math notranslate nohighlight">\(x\)</span>, e TARGET il vettore delle <span class="math notranslate nohighlight">\(y\)</span>. La dimensionalità del problema è detta <span class="math notranslate nohighlight">\(n\)</span>. La rappresentazione consiste nello scegliere la base <span class="math notranslate nohighlight">\(\{x_1,x_2,\dots,x_n\}\)</span> su cui intendiamo invece scomporre le <span class="math notranslate nohighlight">\(\underline x\)</span>. La scelta di una buona rappresentazione è fondamentale perché potrebbe permettere di semplificare la forma della <span class="math notranslate nohighlight">\(f(\underline x)\)</span> e quindi avere più chiarezza su come esprimerla. Un esempio è dato da considerare un insieme di dati che hanno distribuzione che sul piano è scomodo, ma appena passiamo in coordinate radiali è semplificato (come si può vedere in <a class="reference internal" href="#reparametrization"><span class="std std-numref">Fig. 1</span></a>).</p>
+<p>La caratteristica che distingue SML da GPML è che in SML le features sono in genere suggerite dalla fisica che si sta studiando, mentre nel caso di GPML sono più complicate.</p>
 <div class="tip admonition">
 <p class="admonition-title">Features in GPML.</p>
-<p>Per esempio pensando solo al dover dare la differenza cane vs gatto: si parla allora di <em>representation</em> o <em>feature</em> learning.</p>
+<p>Per esempio pensando solo al dover dare la differenza cane vs gatto: si parla allora di <em>representation</em> o <em>feature</em> learning (<a class="reference internal" href="#featurelearning"><span class="std std-numref">Fig. 2</span></a>).</p>
 </div>
-<p>La caratteristica che distingue SML da GPML è che in SML le features sono in genere suggerite dalla fisica che si sta studiando, mentre nel caso di GPML sono più complicate.</p>
+<figure class="align-default" id="featurelearning">
+<img alt="../../_images/Feature_Learning_Diagram.png" src="../../_images/Feature_Learning_Diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Diagram of the feature learning paradigm in machine learning for application to downstream tasks, which can be applied to either raw data such as images or text, or to an initial set of features for the data. (wikipedia)</span><a class="headerlink" href="#featurelearning" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="warning admonition">
 <p class="admonition-title">Confounding features</p>
 <p>Esistono, in entrambi i casi, quelle che sono invece definite le <em>confounding features</em>, ovvero FEATURES che non vorremmo in realtà tenere in considerazione, ma che, un po’ come un background sperimentale, rimangono invece e possono essere problematiche per l’algoritmo. Queste sono spesso associate però a proprietà di simmetria di un sistema, come per esempio una invarianza per traslazione: considerata una immagine, posso aspettarmi che una certa feature sia invece spostata dalla posizione in cui mi aspetti che sia. In questi casi non è il sistema che è invariante per simmetria, ma è la domanda che mi sto ponendo che deve invece esserlo.</p>
