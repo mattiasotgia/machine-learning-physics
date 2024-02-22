@@ -56,8 +56,26 @@ Diagram of the feature learning paradigm in machine learning for application to 
 Esistono, in entrambi i casi, quelle che sono invece definite le _confounding features_, ovvero FEATURES che non vorremmo in realtà tenere in considerazione, ma che, un po' come un background sperimentale, rimangono invece e possono essere problematiche per l'algoritmo. Queste sono spesso associate però a proprietà di simmetria di un sistema, come per esempio una invarianza per traslazione: considerata una immagine, posso aspettarmi che una certa feature sia invece spostata dalla posizione in cui mi aspetti che sia. In questi casi non è il sistema che è invariante per simmetria, ma è la domanda che mi sto ponendo che deve invece esserlo. 
 :::
 
+## Learning strategies and task
 
+(22 febbraio 2024)
 
+Vogliamo portci la domanda di capire *quali* sono i problemi che vogliamo risolvere, ovvero i _task_, in funzione dei dati che sono coinvolti in questa particolare task. 
+
+### Strategie
+
+In ambito di ML ci sono due macro-categorie di strategie. 
+ 1. __supervised__. In questo caso i dati sono $(\mathbold x, \mathbold y)$, e obiettivo sarà individuare la fuinzione $H(\textbf x) = \textbf y$, ovvero la funzione che le lega. 
+ 2. __unsupervised__. I dati qua sono sono invece dati solo da $\textbf x$.
+
+Ma quali sono le _task_ che possiamo avere con il ML?
+ - __Regression__. Questi rappresentano i tipi di problemi principali che possiamo avere in ML. Questo corrisponde a determinare
+
+   $$
+       f(\cdot, \theta): \mathbb X \to \mathbb Y
+   $$
+
+   Il vettore $x$ viene chiamato _features vector_, che noi chiameremo invece INPUT. Il vettore Y invece lo definiremo OUTPUT. 
 
 
 

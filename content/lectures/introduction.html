@@ -333,6 +333,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategie">Strategie</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -417,6 +421,29 @@ document.write(`
 <p>Esistono, in entrambi i casi, quelle che sono invece definite le <em>confounding features</em>, ovvero FEATURES che non vorremmo in realtà tenere in considerazione, ma che, un po’ come un background sperimentale, rimangono invece e possono essere problematiche per l’algoritmo. Queste sono spesso associate però a proprietà di simmetria di un sistema, come per esempio una invarianza per traslazione: considerata una immagine, posso aspettarmi che una certa feature sia invece spostata dalla posizione in cui mi aspetti che sia. In questi casi non è il sistema che è invariante per simmetria, ma è la domanda che mi sto ponendo che deve invece esserlo.</p>
 </div>
 </section>
+<section id="learning-strategies-and-task">
+<h2>Learning strategies and task<a class="headerlink" href="#learning-strategies-and-task" title="Link to this heading">#</a></h2>
+<p>(22 febbraio 2024)</p>
+<p>Vogliamo portci la domanda di capire <em>quali</em> sono i problemi che vogliamo risolvere, ovvero i <em>task</em>, in funzione dei dati che sono coinvolti in questa particolare task.</p>
+<section id="strategie">
+<h3>Strategie<a class="headerlink" href="#strategie" title="Link to this heading">#</a></h3>
+<p>In ambito di ML ci sono due macro-categorie di strategie.</p>
+<ol class="arabic simple">
+<li><p><strong>supervised</strong>. In questo caso i dati sono <span class="math notranslate nohighlight">\((\mathbold x, \mathbold y)\)</span>, e obiettivo sarà individuare la fuinzione <span class="math notranslate nohighlight">\(H(\textbf x) = \textbf y\)</span>, ovvero la funzione che le lega.</p></li>
+<li><p><strong>unsupervised</strong>. I dati qua sono sono invece dati solo da <span class="math notranslate nohighlight">\(\textbf x\)</span>.</p></li>
+</ol>
+<p>Ma quali sono le <em>task</em> che possiamo avere con il ML?</p>
+<ul>
+<li><p><strong>Regression</strong>. Questi rappresentano i tipi di problemi principali che possiamo avere in ML. Questo corrisponde a determinare</p>
+<div class="math notranslate nohighlight">
+\[
+       f(\cdot, \theta): \mathbb X \to \mathbb Y
+   \]</div>
+<p>Il vettore <span class="math notranslate nohighlight">\(x\)</span> viene chiamato <em>features vector</em>, che noi chiameremo invece INPUT. Il vettore Y invece lo definiremo OUTPUT.</p>
+</li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -484,6 +511,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strategie">Strategie</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
