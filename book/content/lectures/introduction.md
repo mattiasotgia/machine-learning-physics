@@ -62,21 +62,35 @@ Esistono, in entrambi i casi, quelle che sono invece definite le _confounding fe
 
 Vogliamo portci la domanda di capire *quali* sono i problemi che vogliamo risolvere, ovvero i _task_, in funzione dei dati che sono coinvolti in questa particolare task. 
 
-### Strategie
-
+:::{admonition} Strategie, inizio
+:class: tip
 In ambito di ML ci sono due macro-categorie di strategie. 
- 1. __supervised__. In questo caso i dati sono $(\mathbold x, \mathbold y)$, e obiettivo sarà individuare la fuinzione $H(\textbf x) = \textbf y$, ovvero la funzione che le lega. 
+ 1. __supervised__. In questo caso i dati sono $(\textbf x, \textbf y)$, e obiettivo sarà individuare la fuinzione $H(\textbf x) = \textbf y$, ovvero la funzione che le lega. 
  2. __unsupervised__. I dati qua sono sono invece dati solo da $\textbf x$.
+:::
 
 Ma quali sono le _task_ che possiamo avere con il ML?
+
  - __Regression__. Questi rappresentano i tipi di problemi principali che possiamo avere in ML. Questo corrisponde a determinare
 
    $$
-       f(\cdot, \theta): \mathbb X \to \mathbb Y
+     f(\cdot, \theta): \mathbb X \to \mathbb Y
    $$
 
-   Il vettore $x$ viene chiamato _features vector_, che noi chiameremo invece INPUT. Il vettore Y invece lo definiremo OUTPUT. 
+   Il vettore $x$ viene chiamato _features vector_, che noi chiameremo invece INPUT. Il vettore Y invece lo definiremo OUTPUT. La funzione potrebbe avere diverse rappresentazioni, in particolare alcune sono mappe rappresentabili come
 
+   $$
+     f: \mathbb R^n \to \mathbb R, \quad f: [[a,b],[c,d],\dots] \to [y_0,y]
+   $$ 
+ - __Classification__. Questo problema può essere formulata di nuovo come
+
+   $$
+       f(\cdot, \theta): \mathbb X \to \mathbb L
+   $$
+
+   dove indichiamo il set di arrivo $\mathbb L$ come Label. Il set di arrivo può essere visto come per la regressione, ma discreto.
+
+   Esempio molto facile di classificatori è il _binary classificator_. Questo infatti è dato da una funzione $f:\{0,1\}\to\{0,1\}$, e rappresenta gli operatori AND, OR, XOR. 
 
 
 
