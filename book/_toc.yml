@@ -6,6 +6,7 @@ root: content/index
 title: Introduzione
 parts:
 - caption: Lezioni
+  numbered: true
   chapters:
   - file: content/lectures/introduction.md
 # - caption: Approfondimenti
