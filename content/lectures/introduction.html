@@ -333,7 +333,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">Time series forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised">Structured output (supervised)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -450,8 +454,33 @@ document.write(`
    \]</div>
 <p>dove indichiamo il set di arrivo <span class="math notranslate nohighlight">\(\mathbb L\)</span> come Label. Il set di arrivo può essere visto come per la regressione, ma discreto.</p>
 <p>Esempio molto facile di classificatori è il <em>binary classificator</em>. Questo infatti è dato da una funzione <span class="math notranslate nohighlight">\(f:\{0,1\}\to\{0,1\}\)</span>, e rappresenta gli operatori AND, OR, XOR.</p>
+<p>La seconda classe di classificatori è data dai <em>multi-class classificators</em>. Questi sono per esempio centrali in ambito della fisica delle particelle.</p>
+<p>Chi decide queste <strong>label</strong> è in genere l’uomo, per le applicazioni di GPML, ma per le applicazioni invece SML si ha che spesso è nota la label per costruzione (come nel caso di dati sintetici che possono essere simulati fedelmente).</p>
 </li>
 </ul>
+<div class="tip admonition">
+<p class="admonition-title">Se mancano i dati…</p>
+<p>Ci sono casi in cui non tutti i dati sono noti, o mancanti, si parla di <em>classification with missing data (supervised)</em> e <em>data imputation (unsupervised)</em>.</p>
+</div>
+<section id="time-series-forecasting">
+<h3>Time series forecasting<a class="headerlink" href="#time-series-forecasting" title="Link to this heading">#</a></h3>
+<p>Poter predirre l’evoluzione si serie temporali è stato un problema centrale, sia in fisica che anche in molti altri ambiti. Si può affrontare come un problema di regressione: date le condizioni <span class="math notranslate nohighlight">\(x\)</span> ora, voglio determinare <span class="math notranslate nohighlight">\(f(x) = y\)</span>, ovvero le condizioni in un futuro (immediato). Un altro modo di vedere il problema è quello invece di studiare <span class="math notranslate nohighlight">\(f(y_{t'\ll t_0}) = y_{t_0}\)</span>, ovvero andare a vedere il passato (anche molto lontano) per vedere se esistono delle periodicità o dei modelli che prevedono quello che è ora (<span class="math notranslate nohighlight">\(t_0\)</span>).</p>
+<p>Spesso quello che si vuole ottenere è una funzione, un modello che tenga conto di entrambe queste visioni, e quindi avere una funzione</p>
+<div class="math notranslate nohighlight">
+\[
+    f(x, y_{t'\ll t}) = y_{t}.
+\]</div>
+</section>
+<section id="structured-output-supervised">
+<h3>Structured output (supervised)<a class="headerlink" href="#structured-output-supervised" title="Link to this heading">#</a></h3>
+<p>Dato un insieme di features, l’outpunt non è semplicemente un singolo dato, ma un insieme, un grafo, una frase, un simbolo, … Lo spazio <span class="math notranslate nohighlight">\(\mathbb Y\)</span> allora diventa di dimensionalità (cardinalità) molto maggiore.</p>
+<p>Lo structured output è spesso utilizzato per mappare diverse rappresentazioni tra di loro</p>
+<ul class="simple">
+<li><p>Speec-to-text translation</p></li>
+<li><p>Text comprehension</p></li>
+</ul>
+<p>Le LLM (Large Language Models) sono sia modelli generativi (<em>generation and sampling</em>, che può essere sia <em>supervised</em> che <em>unsupervised</em>) che structured output. Non sono uno o l’altro, ma a seconda del task sono una buona mistura delle due. I modelli DEEPFAKE sono spesso <em>generatives</em> che generano a partire da <em>noise</em> una immagine.</p>
+</section>
 </section>
 </section>
 
@@ -520,7 +549,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">Time series forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised">Structured output (supervised)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
