@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduzione &#8212; Metodi di Machine Learning per la Fisica</title>
+    <title>1. Introduzione &#8212; Metodi di Machine Learning per la Fisica</title>
   
   
   
@@ -174,7 +174,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lezioni</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduzione</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduzione</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Riferimenti bibliografici</span></p>
 <ul class="nav bd-sidenav">
@@ -332,14 +332,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">Time series forecasting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised-and-generation-and-sampling-unsupervised">Structured output (supervised) and generation and sampling (unsupervised)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-tasks">Unsupervised tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">1.1. Rappresentazioni: qualche dettaglio in più</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">1.2. Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">1.2.1. Time series forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised-and-generation-and-sampling-unsupervised">1.2.2. Structured output (supervised) and generation and sampling (unsupervised)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-tasks">1.2.3. Unsupervised tasks</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-or-statistical-inference">Learning or statistical inference?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-or-statistical-inference">1.3. Learning or statistical inference?</a></li>
 </ul>
             </nav>
         </div>
@@ -352,7 +352,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduzione">
-<h1>Introduzione<a class="headerlink" href="#introduzione" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Introduzione<a class="headerlink" href="#introduzione" title="Link to this heading">#</a></h1>
 <p>(19 febbraio 2024)</p>
 <p>Obiettivo di questo corso non è tanto trovare e mostrare nel dettaglio il funzionamento di algoritmi di ML, quanto invece osservare come questi algoritmi possono esssere utilizzati per affrontare esempi di fisica, o più in geenrale applicati all’ambito della ricerca fisica (o scientifica).</p>
 <p>Esistono molti testi per quanto riguarda gli argomenti che sono trattati in questo corso, i principali sono in bibliografia <span id="id1">[<a class="reference internal" href="../zbiblio.html#id2" title="Charu C. Aggarwal. Neural Networks and Deep Learning: A Textbook. Springer International Publishing, Cham, 2018. ISBN 978-3-319-94462-3 978-3-319-94463-0. doi:10.1007/978-3-319-94463-0.">Agg18</a>, <a class="reference internal" href="../zbiblio.html#id3" title="Glen Cowan and Glen Cowan. Statistical Data Analysis. Oxford University Press, Oxford, New York, March 1998. ISBN 978-0-19-850155-8.">CC98</a>, <a class="reference internal" href="../zbiblio.html#id4" title="Ian Goodfellow, Yoshua Bengio, and Aaron Courville. Deep Learning. MIT press, 2016.">GBC16</a>, <a class="reference internal" href="../zbiblio.html#id5" title="Trevor Hastie, Robert Tibshirani, and Jerome Friedman. The Elements of Statistical Learning. Springer Series in Statistics. Springer, New York, NY, 2009. ISBN 978-0-387-84857-0 978-0-387-84858-7. doi:10.1007/978-0-387-84858-7.">HTF09</a>, <a class="reference internal" href="../zbiblio.html#id6" title="Luca Lista. Statistical Methods for Data Analysis in Particle Physics. Volume 941 of Lecture Notes in Physics. Springer International Publishing, Cham, 2017. ISBN 978-3-319-62839-4 978-3-319-62840-0. doi:10.1007/978-3-319-62840-0.">Lis17</a>, <a class="reference internal" href="../zbiblio.html#id7" title="Tilman Plehn, Anja Butter, Barry Dillon, and Claudius Krause. Modern Machine Learning for LHC Physicists. November 2022. arXiv:2211.01421, doi:10.48550/arXiv.2211.01421.">PBDK22</a>, <a class="reference internal" href="../zbiblio.html#id8" title="Lorenzo Rosasco. Introductory Machine Learning Notes1. University of Genoa ML, 2017.">Ros17</a>]</span>.</p>
@@ -395,7 +395,7 @@ document.write(`
 </tbody>
 </table>
 <section id="rappresentazioni-qualche-dettaglio-in-piu">
-<h2>Rappresentazioni: qualche dettaglio in più<a class="headerlink" href="#rappresentazioni-qualche-dettaglio-in-piu" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Rappresentazioni: qualche dettaglio in più<a class="headerlink" href="#rappresentazioni-qualche-dettaglio-in-piu" title="Link to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>È importante osservare che per quanto non esplicitiamo, né espliciteremo mai, la forma analitica, queste funzioni sono in realtà funzioni in cui teoricamente il modello è noto. Non sto considerando perciò funzioni senza modello!</p>
@@ -408,19 +408,19 @@ document.write(`
 <figure class="margin align-default" id="reparametrization">
 <img alt="../../_images/reparametrization.png" src="../../_images/reparametrization.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Riparametrizzando da coordinate <span class="math notranslate nohighlight">\((x,y)\)</span> a coordinate <span class="math notranslate nohighlight">\((r, \theta)\)</span> possiamo semplificare molto la classificazione.</span><a class="headerlink" href="#reparametrization" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Riparametrizzando da coordinate <span class="math notranslate nohighlight">\((x,y)\)</span> a coordinate <span class="math notranslate nohighlight">\((r, \theta)\)</span> possiamo semplificare molto la classificazione.</span><a class="headerlink" href="#reparametrization" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Chiamiamo FEATURES il vettore delle <span class="math notranslate nohighlight">\(x\)</span>, e TARGET il vettore delle <span class="math notranslate nohighlight">\(y\)</span>. La dimensionalità del problema è detta <span class="math notranslate nohighlight">\(n\)</span>. La rappresentazione consiste nello scegliere la base <span class="math notranslate nohighlight">\(\{x_1,x_2,\dots,x_n\}\)</span> su cui intendiamo invece scomporre le <span class="math notranslate nohighlight">\(\underline x\)</span>. La scelta di una buona rappresentazione è fondamentale perché potrebbe permettere di semplificare la forma della <span class="math notranslate nohighlight">\(f(\underline x)\)</span> e quindi avere più chiarezza su come esprimerla. Un esempio è dato da considerare un insieme di dati che hanno distribuzione che sul piano è scomodo, ma appena passiamo in coordinate radiali è semplificato (come si può vedere in <a class="reference internal" href="#reparametrization"><span class="std std-numref">Fig. 1</span></a>).</p>
+<p>Chiamiamo FEATURES il vettore delle <span class="math notranslate nohighlight">\(x\)</span>, e TARGET il vettore delle <span class="math notranslate nohighlight">\(y\)</span>. La dimensionalità del problema è detta <span class="math notranslate nohighlight">\(n\)</span>. La rappresentazione consiste nello scegliere la base <span class="math notranslate nohighlight">\(\{x_1,x_2,\dots,x_n\}\)</span> su cui intendiamo invece scomporre le <span class="math notranslate nohighlight">\(\underline x\)</span>. La scelta di una buona rappresentazione è fondamentale perché potrebbe permettere di semplificare la forma della <span class="math notranslate nohighlight">\(f(\underline x)\)</span> e quindi avere più chiarezza su come esprimerla. Un esempio è dato da considerare un insieme di dati che hanno distribuzione che sul piano è scomodo, ma appena passiamo in coordinate radiali è semplificato (come si può vedere in <a class="reference internal" href="#reparametrization"><span class="std std-numref">Fig. 1.1</span></a>).</p>
 <p>La caratteristica che distingue SML da GPML è che in SML le features sono in genere suggerite dalla fisica che si sta studiando, mentre nel caso di GPML sono più complicate.</p>
 <div class="tip admonition">
 <p class="admonition-title">Features in GPML.</p>
-<p>Per esempio pensando solo al dover dare la differenza cane vs gatto: si parla allora di <em>representation</em> o <em>feature</em> learning (<a class="reference internal" href="#featurelearning"><span class="std std-numref">Fig. 2</span></a>).</p>
+<p>Per esempio pensando solo al dover dare la differenza cane vs gatto: si parla allora di <em>representation</em> o <em>feature</em> learning (<a class="reference internal" href="#featurelearning"><span class="std std-numref">Fig. 1.2</span></a>).</p>
 </div>
 <figure class="align-default" id="featurelearning">
 <img alt="../../_images/Feature_Learning_Diagram.png" src="../../_images/Feature_Learning_Diagram.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Diagram of the feature learning paradigm in machine learning for application to downstream tasks, which can be applied to either raw data such as images or text, or to an initial set of features for the data. (wikipedia)</span><a class="headerlink" href="#featurelearning" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Diagram of the feature learning paradigm in machine learning for application to downstream tasks, which can be applied to either raw data such as images or text, or to an initial set of features for the data. (wikipedia)</span><a class="headerlink" href="#featurelearning" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="warning admonition">
@@ -429,7 +429,7 @@ document.write(`
 </div>
 </section>
 <section id="learning-strategies-and-task">
-<h2>Learning strategies and task<a class="headerlink" href="#learning-strategies-and-task" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Learning strategies and task<a class="headerlink" href="#learning-strategies-and-task" title="Link to this heading">#</a></h2>
 <p>(22 febbraio 2024)</p>
 <p>Vogliamo portci la domanda di capire <em>quali</em> sono i problemi che vogliamo risolvere, ovvero i <em>task</em>, in funzione dei dati che sono coinvolti in questa particolare task.</p>
 <div class="tip admonition">
@@ -473,7 +473,7 @@ document.write(`
 <p>Ci sono casi in cui non tutti i dati sono noti, o mancanti, si parla di <em>classification with missing data (supervised)</em> e <em>data imputation (unsupervised)</em>.</p>
 </div>
 <section id="time-series-forecasting">
-<h3>Time series forecasting<a class="headerlink" href="#time-series-forecasting" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Time series forecasting<a class="headerlink" href="#time-series-forecasting" title="Link to this heading">#</a></h3>
 <p>Poter predirre l’evoluzione si serie temporali è stato un problema centrale, sia in fisica che anche in molti altri ambiti. Si può affrontare come un problema di regressione: date le condizioni <span class="math notranslate nohighlight">\(x\)</span> ora, voglio determinare <span class="math notranslate nohighlight">\(f(x) = y\)</span>, ovvero le condizioni in un futuro (immediato). Un altro modo di vedere il problema è quello invece di studiare <span class="math notranslate nohighlight">\(f(y_{t'\ll t_0}) = y_{t_0}\)</span>, ovvero andare a vedere il passato (anche molto lontano) per vedere se esistono delle periodicità o dei modelli che prevedono quello che è ora (<span class="math notranslate nohighlight">\(t_0\)</span>).</p>
 <p>Spesso quello che si vuole ottenere è una funzione, un modello che tenga conto di entrambe queste visioni, e quindi avere una funzione</p>
 <div class="math notranslate nohighlight">
@@ -482,7 +482,7 @@ document.write(`
 \]</div>
 </section>
 <section id="structured-output-supervised-and-generation-and-sampling-unsupervised">
-<h3>Structured output (supervised) and generation and sampling (unsupervised)<a class="headerlink" href="#structured-output-supervised-and-generation-and-sampling-unsupervised" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>Structured output (supervised) and generation and sampling (unsupervised)<a class="headerlink" href="#structured-output-supervised-and-generation-and-sampling-unsupervised" title="Link to this heading">#</a></h3>
 <p><strong>Structured output</strong>. Dato un insieme di features, l’outpunt non è semplicemente un singolo dato, ma un insieme, un grafo, una frase, un simbolo, … Lo spazio <span class="math notranslate nohighlight">\(\mathbb Y\)</span> allora diventa di dimensionalità (cardinalità) molto maggiore.</p>
 <p>Lo structured output è spesso utilizzato per mappare diverse rappresentazioni tra di loro</p>
 <ul class="simple">
@@ -493,7 +493,7 @@ document.write(`
 <p>I modelli generativi, per quanto siano invece molto utilizzati in ambito industriale e in GPML, nell’ambito della scienza possono risultare molto pericolosi. Una scoperta a <span class="math notranslate nohighlight">\(5\sigma\)</span> con un modello generativo è denotata da una incertezza che non possiamo permetterci.</p>
 </section>
 <section id="unsupervised-tasks">
-<h3>Unsupervised tasks<a class="headerlink" href="#unsupervised-tasks" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3. </span>Unsupervised tasks<a class="headerlink" href="#unsupervised-tasks" title="Link to this heading">#</a></h3>
 <p><strong>Density estimation</strong>. Supponiamo di conoscere dei dati <span class="math notranslate nohighlight">\(\textbf x\)</span>, e vogliamo ottenerne la distribuzione in probabilità <span class="math notranslate nohighlight">\(p(\textbf x | \boldsymbol \theta)\)</span>. Il vettore delle <span class="math notranslate nohighlight">\(\theta\)</span> è l’insieme dei parametri che caratterizzano la PDF (per la gaussiana sono per esempio <span class="math notranslate nohighlight">\(\{\boldsymbol \mu, \xi\}\)</span>, con <span class="math notranslate nohighlight">\(\boldsymbol \mu\)</span> il vettore dei valori medi, e <span class="math notranslate nohighlight">\(\xi\)</span> la matrice di covarianza).</p>
 <p><strong>Anomaly detection</strong>. Spesso confusa con la classificazione a due categorie (sig/bkg). Non è così, ma invece è un modello unsupervised, e consiste invece nel voler trovare un <strong>outlier</strong> rispetto ad una certa popolazione. Dal punto di vista scientifico è utile</p>
 <ul class="simple">
@@ -502,11 +502,11 @@ document.write(`
 <li><p>possono essere utilizzati in algoritmi di trigger online, che permetta di scartare eventi che non sono utili alla fisica che si vuole fare.</p></li>
 </ul>
 <p><strong>Denoising</strong>. Considerato un segnale, che può essere per esempio segnale astrofisico, o segnale di altro genere, si vuole rimuovere quello che è ritenuto <strong>fondo</strong> o <strong>rumore</strong>.</p>
-<p><strong>Clustering</strong>. È quello che abbiamo fatto nell’esempio della <a class="reference internal" href="#reparametrization"><span class="std std-numref">Fig. 1</span></a>. Si tratta di voler dividere dei dati iniziali rispetto ad alcune caratteristiche, ovvero dividere i dati rispetto ad alcuni <em>clusters</em>.</p>
+<p><strong>Clustering</strong>. È quello che abbiamo fatto nell’esempio della <a class="reference internal" href="#reparametrization"><span class="std std-numref">Fig. 1.1</span></a>. Si tratta di voler dividere dei dati iniziali rispetto ad alcune caratteristiche, ovvero dividere i dati rispetto ad alcuni <em>clusters</em>.</p>
 </section>
 </section>
 <section id="learning-or-statistical-inference">
-<h2>Learning or statistical inference?<a class="headerlink" href="#learning-or-statistical-inference" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3. </span>Learning or statistical inference?<a class="headerlink" href="#learning-or-statistical-inference" title="Link to this heading">#</a></h2>
 <p>Formulare un modello, prendere dei dati, stimare i parametri, e poi utilizzare il modello per vedere come si comporta su altri dati sono caratteristiche condivise tra i due casi, <em>ML</em> e <em>statistical inference</em>. In particolare osserviamo che condividono alcune caratteristiche comuni</p>
 <div class="math notranslate nohighlight">
 \[
@@ -595,14 +595,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">Rappresentazioni: qualche dettaglio in più</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">Learning strategies and task</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">Time series forecasting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised-and-generation-and-sampling-unsupervised">Structured output (supervised) and generation and sampling (unsupervised)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-tasks">Unsupervised tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappresentazioni-qualche-dettaglio-in-piu">1.1. Rappresentazioni: qualche dettaglio in più</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-strategies-and-task">1.2. Learning strategies and task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series-forecasting">1.2.1. Time series forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-output-supervised-and-generation-and-sampling-unsupervised">1.2.2. Structured output (supervised) and generation and sampling (unsupervised)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised-tasks">1.2.3. Unsupervised tasks</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-or-statistical-inference">Learning or statistical inference?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-or-statistical-inference">1.3. Learning or statistical inference?</a></li>
 </ul>
   </nav></div>
 
