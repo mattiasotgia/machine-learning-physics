@@ -90,7 +90,51 @@ Ma quali sono le _task_ che possiamo avere con il ML?
 
    dove indichiamo il set di arrivo $\mathbb L$ come Label. Il set di arrivo può essere visto come per la regressione, ma discreto.
 
-   Esempio molto facile di classificatori è il _binary classificator_. Questo infatti è dato da una funzione $f:\{0,1\}\to\{0,1\}$, e rappresenta gli operatori AND, OR, XOR. 
+   Esempio molto facile di classificatori è il _binary classificator_. Questo infatti è dato da una funzione $f:\{0,1\}\to\{0,1\}$, e rappresenta gli operatori AND, OR, XOR.
+
+   La seconda classe di classificatori è data dai _multi-class classificators_. Questi sono per esempio centrali in ambito della fisica delle particelle.
+
+   Chi decide queste __label__ è in genere l'uomo, per le applicazioni di GPML, ma per le applicazioni invece SML si ha che spesso è nota la label per costruzione (come nel caso di dati sintetici che possono essere simulati fedelmente).
+
+:::{admonition} Se mancano i dati...
+:class: tip
+Ci sono casi in cui non tutti i dati sono noti, o mancanti, si parla di _classification with missing data (supervised)_ e _data imputation (unsupervised)_.
+:::
+
+### Time series forecasting
+
+Poter predirre l'evoluzione si serie temporali è stato un problema centrale, sia in fisica che anche in molti altri ambiti. Si può affrontare come un problema di regressione: date le condizioni $x$ ora, voglio determinare $f(x) = y$, ovvero le condizioni in un futuro (immediato). Un altro modo di vedere il problema è quello invece di studiare $f(y_{t'\ll t_0}) = y_{t_0}$, ovvero andare a vedere il passato (anche molto lontano) per vedere se esistono delle periodicità o dei modelli che prevedono quello che è ora ($t_0$). 
+
+Spesso quello che si vuole ottenere è una funzione, un modello che tenga conto di entrambe queste visioni, e quindi avere una funzione 
+
+$$
+    f(x, y_{t'\ll t}) = y_{t}.
+$$
+
+### Structured output (supervised)
+
+Dato un insieme di features, l'outpunt non è semplicemente un singolo dato, ma un insieme, un grafo, una frase, un simbolo, ... Lo spazio $\mathbb Y$ allora diventa di dimensionalità (cardinalità) molto maggiore. 
+
+Lo structured output è spesso utilizzato per mappare diverse rappresentazioni tra di loro
+ - Speec-to-text translation
+ - Text comprehension
+
+Le LLM (Large Language Models) sono sia modelli generativi (_generation and sampling_, che può essere sia _supervised_ che _unsupervised_) che structured output. Non sono uno o l'altro, ma a seconda del task sono una buona mistura delle due. I modelli DEEPFAKE sono spesso _generatives_ che generano a partire da _noise_ una immagine. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
