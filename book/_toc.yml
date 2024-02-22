@@ -7,7 +7,7 @@ title: Introduzione
 parts:
 - caption: Lezioni
   chapters:
-  - file: content/lectures/introduction
+  - file: content/lectures/introduction.md
 # - caption: Approfondimenti
 #   chapters:
 #   - file: content/in_depth/aridaje
