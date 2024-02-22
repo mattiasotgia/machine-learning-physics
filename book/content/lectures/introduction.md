@@ -21,6 +21,10 @@ Esistono quattro aspetti essenziali su cui vi è forte divergenza tra il _genera
 
 ## Rappresentazioni: qualche dettaglio in più
 
+:::{margin}
+È importante osservare che per quanto non esplicitiamo, né espliciteremo mai, la forma analitica, queste funzioni sono in realtà funzioni in cui teoricamente il modello è noto. Non sto considerando perciò funzioni senza modello!
+:::
+
 Considerato un esperimento supervisionato, per cui dato una variabile $x$ (che può essere un vettore, o anche in un problema semplificato uno scalare) vogliamo ottenere 
 
 $$ 
@@ -71,6 +75,10 @@ In ambito di ML ci sono due macro-categorie di strategie.
 
 Ma quali sono le _task_ che possiamo avere con il ML?
 
+:::{margin}
+_Classification_ e _regression_ sono di fatto praticamente uguali, ma differiscono solo all'ultimo layer, dove divergono nell'ultimo layer, associando i label. 
+:::
+
  - __Regression__. Questi rappresentano i tipi di problemi principali che possiamo avere in ML. Questo corrisponde a determinare
 
    $$
@@ -111,9 +119,9 @@ $$
     f(x, y_{t'\ll t}) = y_{t}.
 $$
 
-### Structured output (supervised)
+### Structured output (supervised) and generation and sampling (unsupervised)
 
-Dato un insieme di features, l'outpunt non è semplicemente un singolo dato, ma un insieme, un grafo, una frase, un simbolo, ... Lo spazio $\mathbb Y$ allora diventa di dimensionalità (cardinalità) molto maggiore. 
+__Structured output__. Dato un insieme di features, l'outpunt non è semplicemente un singolo dato, ma un insieme, un grafo, una frase, un simbolo, ... Lo spazio $\mathbb Y$ allora diventa di dimensionalità (cardinalità) molto maggiore. 
 
 Lo structured output è spesso utilizzato per mappare diverse rappresentazioni tra di loro
  - Speec-to-text translation
@@ -121,12 +129,46 @@ Lo structured output è spesso utilizzato per mappare diverse rappresentazioni t
 
 Le LLM (Large Language Models) sono sia modelli generativi (_generation and sampling_, che può essere sia _supervised_ che _unsupervised_) che structured output. Non sono uno o l'altro, ma a seconda del task sono una buona mistura delle due. I modelli DEEPFAKE sono spesso _generatives_ che generano a partire da _noise_ una immagine. 
 
+I modelli generativi, per quanto siano invece molto utilizzati in ambito industriale e in GPML, nell'ambito della scienza possono risultare molto pericolosi. Una scoperta a $5\sigma$ con un modello generativo è denotata da una incertezza che non possiamo permetterci. 
+
+### Unsupervised tasks
+
+__Density estimation__. Supponiamo di conoscere dei dati $\textbf x$, e vogliamo ottenerne la distribuzione in probabilità $p(\textbf x | \boldsymbol \theta)$. Il vettore delle $\theta$ è l'insieme dei parametri che caratterizzano la PDF (per la gaussiana sono per esempio $\{\boldsymbol \mu, \xi\}$, con $\boldsymbol \mu$ il vettore dei valori medi, e $\xi$ la matrice di covarianza).  
+
+__Anomaly detection__. Spesso confusa con la classificazione a due categorie (sig/bkg). Non è così, ma invece è un modello unsupervised, e consiste invece nel voler trovare un __outlier__ rispetto ad una certa popolazione. Dal punto di vista scientifico è utile
+ - permette di trovare velocemente degli outlier in una teoria.
+ - data quality monitor: se osservo in una raccolta dati dei valori _strani_ posso ipotizzare che questi siano _sbagliati_.
+ - possono essere utilizzati in algoritmi di trigger online, che permetta di scartare eventi che non sono utili alla fisica che si vuole fare.
+
+__Denoising__. Considerato un segnale, che può essere per esempio segnale astrofisico, o segnale di altro genere, si vuole rimuovere quello che è ritenuto __fondo__ o __rumore__.
+
+__Clustering__. È quello che abbiamo fatto nell'esempio della {numref}`reparametrization`. Si tratta di voler dividere dei dati iniziali rispetto ad alcune caratteristiche, ovvero dividere i dati rispetto ad alcuni _clusters_. 
 
 
+## Learning or statistical inference?
 
+Formulare un modello, prendere dei dati, stimare i parametri, e poi utilizzare il modello per vedere come si comporta su altri dati sono caratteristiche condivise tra i due casi, _ML_ e _statistical inference_. In particolare osserviamo che condividono alcune caratteristiche comuni 
 
+$$
+    \text{fit (or parameter estimation)} \leftrightarrow \text{training}
+$$
+$$
+    \text{goodness of fit test} \leftrightarrow \text{model validation}
+$$
 
+L'inferenza statistica tradizionale fornisce dei dati (che chiamiamo train data), che, considerato un modello $f(\bf x, \boldsymbol \theta) = \bf y$, mi permette di stimare i parametri $\boldsymbol \theta$. Generalmente quindi un test GoF lo vado a fare su due modelli. 
 
+Lo scopo del ML non è quello di capire se i miei dati mi danno dei parametri buoni, quano invece di dare un modello che mi permette di essere riutilizzato. Si vede quindi la difficoltà dell'overtraining. Quindi diventa fondamentale anche il passaggio di model validation, che non è tra modelli diversi, ma tra modelli uguali, con differenti livelli di predizione del modello, e procedo fintanto che il livello di predizione del modello e dei dati di validation sono in buon accordo.
+
+:::{admonition} Learning
+:class: important
+La procedura del learning consiste nel costruire un modello statistico, di cui conosco appena alcune proprietà; fittare il modello ai dati; calcolare la stessa funzione su un altro set di dati; se mi soddisfa ottimo, altrimenti modifico dei dati e ripeto il processo da capo. 
+
+In un nuovo linguaggio
+ - training, on some hyperparameters
+ - model validation
+ - calibration
+:::
 
 
 
